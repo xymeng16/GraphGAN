@@ -17,12 +17,16 @@ max_epochs_dis = 30  # loop number for discriminator
 
 gen_for_d_iters = 10  # iteration numbers for generate new data for discriminator
 max_degree = 0  # the max node degree of the network
-model_log = "../log/iteration/"
+
+model_log = "../../log/iteration/"
 
 use_mul = False # control if use the multiprocessing when constructing trees
 load_model = False  # if load the model for continual training
 gen_update_iter = 200
 window_size = 3
+
+
+
 random_state = np.random.randint(0, 100000)
 app = "link_prediction"
 train_filename = "../../data/" + app + "/others" + "/CA-GrQc_undirected_train.txt"
