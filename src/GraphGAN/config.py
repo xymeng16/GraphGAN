@@ -20,7 +20,7 @@ max_degree = 0  # the max node degree of the network
 
 model_log = "../../log/iteration/"
 
-use_mul = False # control if use the multiprocessing when constructing trees
+use_mul = True # control if use the multiprocessing when constructing trees
 load_model = False  # if load the model for continual training
 gen_update_iter = 200
 window_size = 3

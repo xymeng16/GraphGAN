@@ -28,7 +28,7 @@ class Generator(object):
         # clip value
         self.i_prob = tf.clip_by_value(i_prob, 1e-5, 1)
         self.gan_loss = -tf.reduce_mean(tf.log(self.i_prob) * self.reward) \
-                        + config.lambda_gen* (tf.nn.l2_loss(self.rel_embedding) + tf.nn.l2_loss(self.q_embedding))
+                        + config.lambda_gen * (tf.nn.l2_loss(self.rel_embedding) + tf.nn.l2_loss(self.q_embedding))
         g_opt = tf.train.AdamOptimizer(config.lr_gen)
         self.gan_updates = g_opt.minimize(self.gan_loss)
 

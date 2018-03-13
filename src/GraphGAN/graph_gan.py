@@ -242,7 +242,7 @@ class GraphGan(object):
         print("Evaluation")
         self.write_emb_to_txt()
         self.eval_test()  # evaluation
-        for epoch in tqdm.tqdm(range(config.max_epochs)):
+        for epoch in tqdm.tqdm(range(config.max_epochs)): # outer_loop
             #  save the model
             if epoch % config.save_steps == 0 and epoch > 0:
                 self.saver.save(self.sess, config.model_log + "model.ckpt")
